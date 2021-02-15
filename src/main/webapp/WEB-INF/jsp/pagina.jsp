@@ -9,11 +9,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-	<h1>HOME PAGE HEHEHEHHE</h1>
-
-	<c:forEach items="${continents}" var="cont">
-		<p>${cont}</p>
-	</c:forEach>
+	<h1>BENVENUTO SUL PORTALE</h1>
+	<h2>${result}</h2>
+	<a href="/login">TORNA ALLA LOGIN</a>
 </body>
 </html>

@@ -9,11 +9,16 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<h1>BENVENUTO SUL PORTALE</h1>
+	<h2>${result}</h2>
 
-	<h1>HOME PAGE HEHEHEHHE</h1>
+	<a href="/pagina-param?num-pagina=1">1</a>
+	<a href="/pagina-param?num-pagina=2">2</a>
+	<a href="/pagina-param?num-pagina=3">3</a>
+	<a href="/pagina-param?num-pagina=4">4</a>
+	<a href="/pagina-param?num-pagina=5">5</a>
+	<a href="/pagina-param?num-pagina=6">6</a>
+	<a href="/pagina-param?num-pagina=7">7</a>
 
-	<c:forEach items="${continents}" var="cont">
-		<p>${cont}</p>
-	</c:forEach>
 </body>
 </html>
