@@ -1,6 +1,10 @@
 package it.objectmethod.esempio.controller;
 
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
+
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,12 +16,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import it.objectmethod.esempio.dao.IDaoNazioni;
+import it.objectmethod.esempio.dao.utils.MyDependencyInjectionExample;
 
 @Controller
 public class HomeController {
 
 	@Autowired
 	private IDaoNazioni daoNaz;
+
+	@Autowired
+	private MyDependencyInjectionExample example;
+
+	@RequestMapping("/qualcosa")
+	public void esempioDi(HttpServletResponse resp) throws IOException {
+		String frase = example.qualcosa();
+		PrintWriter writer = resp.getWriter();
+		writer.write(frase);
+	}
 
 	@RequestMapping("/index")
 	public String home(ModelMap map) {
