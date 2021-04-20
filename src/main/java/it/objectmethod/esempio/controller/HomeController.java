@@ -42,7 +42,7 @@ public class HomeController {
 		return "home";
 	}
 
-//	@RequestMapping(value = "/index-con-get", method = RequestMethod.GET)
+	// @RequestMapping(value = "/index-con-get", method = RequestMethod.GET)
 	@GetMapping("/index-con-get")
 	public String homeGet(ModelMap map) {
 		List<String> conts = daoNaz.getAllContinenti();
