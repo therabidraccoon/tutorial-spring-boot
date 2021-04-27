@@ -21,6 +21,8 @@ import it.objectmethod.esempio.dao.utils.MyDependencyInjectionExample;
 @Controller
 public class HomeController {
 
+	// Altre modifiche che piacciono a baba
+
 	@Autowired
 	private IDaoNazioni daoNaz;
 
